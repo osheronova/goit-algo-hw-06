@@ -135,14 +135,14 @@ def build_graph():
             if G.has_edge(u, v):
                 G[u][v]["time"] = 5
 
-    # Interchanges (пересадки) → time = 2
+    # Interchanges (пересадки) → time = 4
     transfers = [
         ("Театральна", "Золоті ворота"),
         ("Хрещатик", "Майдан Незалежності"),
         ("Площа Українських Героїв", "Палац спорту"),
     ]
     for u, v in transfers:
-        G.add_edge(u, v, time=2)
+        G.add_edge(u, v, time=4)
 
     return G
 
